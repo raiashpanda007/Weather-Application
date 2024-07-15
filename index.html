@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Please Enter your city and get weather forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="background"></div>
+        <div class="Card">
+            <h1 style="color: white;">Weather of Your City</h1>
+            <div class="Input_Box">
+                <div class="Input"><input type="text" name="" id="" placeholder="Enter Your City"></div>
+                <div class="Location_Button" id="Button1">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="Search_Button" id="Button2">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="WeatherForecast displayZero">
+                <div class="Part1">
+                    <div class="TemperatureCard">
+                        <div class="TemperatureHeading">
+                            <i class="fa-solid fa-temperature-high"></i><h2>Temperature</h2>
+                        </div>
+                        <div class="TemperatureContent">
+                            <div class="CurrentTemp">
+                                <div class="CurrTempHeading">
+                                    <i class="fa-solid fa-temperature-three-quarters"></i><h3>Curr  Temp :</h3>
+                                </div>
+                                <div class="Temperature">0</div>
+                            </div>
+                            <div class="FeelsLike">
+                                <div class="FeelsLikeHeading">
+                                    <i class="fa-solid fa-feather"></i><h3>Feels Like :</h3>
+                                </div>
+                                <div class="FeelsLikeTemp">0</div>
+                            </div>
+                            <div class="MaxTemp">
+                                <div class="MaxTempHeading">
+                                    <i class="fa-solid fa-temperature-arrow-up"></i><h3>Max Temp :</h3>
+                                </div>
+                                <div class="MaxTempValue">0</div>
+                            </div>
+                            <div class="MinTemp">
+                                <div class="MinTempHeading">
+                                    <i class="fa-solid fa-temperature-arrow-down"></i><h3>Min Temp :</h3>
+                                </div>
+                                <div class="MinTempValue">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Part2">
+                    <div class="WeatherCard">
+                        <div class="WeatherImg">
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                            <div class="TypeOfWeather">
+                                Haze
+                            </div>
+                        </div>
+                        <div class="WeatherContent">
+                            <div class="WindSpeed">
+                                <div class="WindSpeedHeading">
+                                    <i class="fa-solid fa-wind"></i><h3 class="WindValue">Wind Speed : 0</h3>
+                                </div>
+                               
+                            </div>
+                            <div class="Humidity">
+                                <div class="HumidityHeading">
+                                    <i class="fa-solid fa-water"></i><h3 class="HumidityValue">Humidity : 0</h3>
+                                </div>
+                              
+                            </div>
+                            <div class="Pressure">
+                                <div class="PressureHeading">
+                                    <i class="fa-solid fa-tachometer"></i><h3 class="PressureValue">Pressure : 0</h3>
+                                </div>
+                              
+                            </div>
+                            <div class="Visibility">
+                                <div class="VisibilityHeading">
+                                    <i class="fa-solid fa-eye"></i><h3 class="VisibilityValue">Visibility : 0</h3>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="NoResult displayZero">
+                <h1>No Result Found</h1>
+                <div class="Cross">
+                    <i class="fa-solid fa-circle-xmark" style="color: #ff0000;"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

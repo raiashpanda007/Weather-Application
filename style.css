@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    animation: animateBg 5s linear infinite;
+    z-index: -1;
+}
+
+@keyframes animateBg {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.Card {
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: 75%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.Input_Box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+.Card h1 {
+    padding: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.Input_Box input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 20px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.Input_Box input::placeholder {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.Location_Button, .Search_Button {
+    background-color: white;
+    padding: 2px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.Location_Button i, .Search_Button ins {
+    font-size: 1rem;
+}
+
+.onFocus {
+    filter: drop-shadow(0 0 0.2rem white);
+    border: 40px solid white; 
+    outline: 4px solid white; 
+}
+
+.iconFocus {
+    animation: animateIconFocus 0.5s linear forwards;
+}
+
+@keyframes animateIconFocus {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+        background-color: black;
+        color: white;
+    }
+}
+
+.iconOutFocus {
+    animation: animateIconOutFocus 0.5s linear forwards;
+}
+
+@keyframes animateIconOutFocus {
+    0% {
+        transform: scale(1.2);
+        background-color: black;
+        color: white;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.displayZero {
+    
+    display: none !important
+    ;
+}
+
+.WeatherForecast {
+    height: 600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.Part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TemperatureCard {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 70%;
+    width: 80%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.TemperatureCard .TemperatureHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+
+.TemperatureCard .TemperatureHeading i {
+    padding-top: 15px;
+}
+
+.TemperatureCard h2 {
+    padding-top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.MinTemp, .MaxTemp, .FeelsLike, .CurrentTemp {
+    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.CurrentTemp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.CurrentTemp .CurrTempHeading {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.Temperature {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.FeelsLike {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.FeelsLike .FeelsLikeHeading {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.FeelsLikeTemp {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.MinTemp, .MaxTemp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.MinTemp .MinTempHeading, .MaxTemp .MaxTempHeading {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.MinTempValue, .MaxTempValue {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.Part2 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Part2 .WeatherCard {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 70%;
+    width: 80%;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.WeatherImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+.WeatherImg img {
+    background-color: black;
+    border-radius: 50%;
+}
+.WeatherContent{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.WindSpeed, .Humidity, .Pressure, .Visibility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.8rem;
+    
+}
+.HumidityValue{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+.NoResult{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: "popins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+
+}
+.NoResult h1{
+    color: white;
+}
+.NoResult i{
+    font-size: 2rem;
+}
+@media (max-width: 414px){
+    .Card{
+        width: 100%;
+    }
+    .Card h1{
+        font-size: 1.1rem;
+    }
+    .Input_Box{
+        width: 80%;
+    }
+    .TemperatureCard{
+        width: 100%;
+    }
+    .Part2 .WeatherCard{
+        width: 100%;
+    }
+    .TemperatureCard .TemperatureHeading{
+        justify-content: center;
+    }
+    .TemperatureCard .TemperatureHeading,
+    .TemperatureCard h2{
+        font-size: 1rem;
+        padding-left: 0px;
+        
+    }
+    .TemperatureCard h2{
+        padding-top: 6%;
+    }
+    .MinTemp, .MaxTemp, .FeelsLike, .CurrentTemp{
+        font-size: 1rem;
+    }
+    .Humidity, .Pressure, .Visibility, .WindSpeed{
+        padding-left: 2%;
+        font-size: 0.6rem;
+    }
+
+}
